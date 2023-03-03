@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+
+<body>
+  <div class="wrapper">
+    <div class="main">
+
+      <div class="top">
+        <a href="/"><img src="{{ .Site.Params.logo }}" width="72" height="72" class="avatar"></a>
+        <div class="site-info">
+          <a class="site-title" href="/">{{ .Site.Params.title }}</a>
+        </div>
+      </div>
+
+      <div class="nav-container">
+        <div class="nav">
+
+          <a href="/" class="nav-current">Home</a>
+          {{ range .Site.Params.socials }}
+          <a href="{{ .link }}">{{ .name }}</a>
+          {{ end }}
+
+        </div>
+      </div>

@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+<div class="items">
+
+  {{ range .Pages }}
+  <div class="item" >
+    <div class="item-main">
+      <div class="item-title">
+        <a class="post-entry" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+      <div class="item-info">
+        <div class="item-date"><time class="entry-time" datetime="{{ .Date.Format " 2006-01-02 15:04:05 MST" }}">
+          {{ .Date.Format "2006年1月2日"}}</time></div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ partial "footer.html" . }}
